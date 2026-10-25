@@ -11,6 +11,9 @@ known_hosts*
 # Unreviewed captures and local notes
 private/
 captures/
+*.pcap
+*.pcapng
+*.cap
 *.log
 
 # Editor and operating system files

@@ -9,12 +9,15 @@ Hands-on Linux administration and networking practice, documented with a focus o
 | [Omarchy Linux: installation and remote administration](labs/01-omarchy-remote-access.md) | Installation, OpenSSH, SSH troubleshooting, UFW, host key verification, and Windows-to-Linux access | Completed |
 | [Linux SSH hardening](labs/02-linux-ssh-hardening.md) | System baseline, Ed25519 key authentication, SSH hardening, configuration validation, and subnet-scoped UFW access | Completed |
 | [Network discovery & diagnostics](labs/03-network-discovery-diagnostics.md) | Addressing, routing, ping, ARP, Nmap host discovery, reverse lookup, sockets, and UFW review | Completed; follow-ups open |
+| [Wireshark packet analysis](labs/04-wireshark-packet-analysis.md) | Capture setup, ICMP, DNS, TCP handshake, TLS 1.3, and encrypted traffic metadata | Completed |
 
 The first lab established a working Linux environment and successful remote shell access from Windows. It demonstrates practical familiarity with service management, network connectivity checks, firewall rules, and SSH server identity verification.
 
 Lab 02 built on that access with a system baseline, dedicated Ed25519 authentication, verified SSH hardening, and a revised firewall source scope. An unexplained port 53317 firewall allowance remains an unresolved follow-up documented in the lab.
 
 Lab 03 verified local and Internet connectivity, discovered 8 responding LAN hosts, explored reverse lookup, and related application connections and SSH listeners to UFW policy. Unknown host identification and the port 53317 security review remain open.
+
+Lab 04 analyzed ICMP requests/replies, a DNS response with two A records, the TCP three-way handshake, and TLS 1.3 traffic. It distinguishes protected HTTPS content from visible connection metadata.
 
 ## Skills demonstrated
 
@@ -30,6 +33,8 @@ Lab 03 verified local and Internet connectivity, discovered 8 responding LAN hos
 - IPv4 addressing, DHCP routes, and layered ping diagnostics
 - ARP neighbor-state inspection, Nmap host discovery, and reverse lookup
 - Active connection and process inspection with ss
+- Wireshark capture permissions, display filters, and TCP stream analysis
+- ICMP and DNS interpretation, TCP handshakes, and TLS metadata analysis
 - Privacy-conscious technical documentation
 
 ## Planned future labs
@@ -49,3 +54,5 @@ These are learning objectives, not completed projects or claims of experience.
 Completed milestones reflect the lab owner's reported work. The lab separates those outcomes from illustrative commands and future work. Raw terminal transcripts, screenshots, and exact configuration exports are not included; the commands are reference examples, not execution evidence.
 
 Credentials, keys, MAC addresses, and identifying device names are omitted. Labs 01 and 02 use sanitized placeholders and documentation addresses; Lab 03 retains the private IPv4 addresses and firewall scopes requested for its diagnostic record. Replace reference values as appropriate when repeating commands on another network.
+
+Lab 04 omits private endpoint addresses and raw packet captures. Capture files are ignored to reduce accidental publication; display filters alone do not sanitize their contents.
